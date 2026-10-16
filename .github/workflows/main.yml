@@ -29,6 +29,7 @@ jobs:
         run: ./mvnw clean verify
 
       - name: SonarCloud scan
+        working-directory: backend/simpleapi
         run: >
           ./mvnw -B org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
           -Dsonar.projectKey=DarfilalAbdou_DockerPracticeTP1
