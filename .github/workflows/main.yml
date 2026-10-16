@@ -22,8 +22,10 @@ jobs:
           distribution: 'temurin'
 
       #finally build your app with the latest command
+      - name: Make mvnw executable
+        run: chmod +x backend/simpleapi/mvnw
       - name: Build and test with Maven
-        run: backend/simpleapi/mvnw.cmd clean verify
+        run: backend/simpleapi/mvnw clean verify
 
   build-and-push-docker-image:
     needs: test-backend
