@@ -30,11 +30,7 @@ jobs:
 
       - name: SonarCloud scan
         working-directory: backend/simpleapi
-        run: >
-          ./mvnw -B org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
-          -Dsonar.projectKey=DarfilalAbdou_DockerPracticeTP1
-          -Dsonar.organization=darfilalabdou
-          -Dsonar.host.url=https://sonarcloud.io
+        run: ./mvnw -B org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=DarfilalAbdou_DockerPracticeTP1 -Dsonar.organization=darfilalabdou -Dsonar.host.url=https://sonarcloud.io
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
