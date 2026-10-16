@@ -25,7 +25,7 @@ jobs:
       - name: Make mvnw executable
         run: chmod +x backend/simpleapi/mvnw
       - name: Build and test with Maven
-        run: backend/simpleapi/mvnw clean verify
+        run: ./mvnw clean verify
 
   build-and-push-docker-image:
     needs: test-backend
